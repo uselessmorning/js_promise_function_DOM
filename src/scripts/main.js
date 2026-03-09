@@ -4,7 +4,7 @@ function waitFor(element, eventName) {
   // write your code here
   return new Promise((resolve) => {
     function handler() {
-      element.removeEventListener(eventName, element);
+      element.removeEventListener(eventName, handler);
 
       resolve(
         `It was ${eventName} on the element: ${element.nodeName}, id: ${element.id}.`,
